@@ -1,10 +1,8 @@
 import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { Weather } from '../../services/weather/weather.service.ts'
-
+import { Weather } from '../../services/weather/weather.service.ts';
 @Component({
     selector: 'main',
     template: require('./main.component.ngux'),
-    providers: [Weather],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainComponent {

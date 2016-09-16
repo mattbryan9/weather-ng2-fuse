@@ -4,18 +4,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { MainComponent } from './components/main/main.component';
-import { TabComponent } from './components/tab/tab.component';
 import { RainComponent } from './components/rain/rain.component';
 import { SnowComponent } from './components/snow/snow.component';
-import { TesterComponent } from './components/tester/tester.component';
 import { TimeComponent } from './components/time/time.component';
+
+import { Weather } from './services/weather/weather.service.ts';
 
 @NgModule({
     imports: [
         FuseModule, CommonModule, FormsModule, ReactiveFormsModule, HttpModule
     ],
-    declarations: [MainComponent, RainComponent, SnowComponent, TabComponent, TesterComponent, TimeComponent],
+    declarations: [MainComponent, RainComponent, SnowComponent, TimeComponent, Weather],
     bootstrap: [MainComponent]
 })
 class MainModule { }
