@@ -1,0 +1,23 @@
+<Panel ng:Selector="main" Background="#eeeeeeff">
+  <DockPanel> 
+    <Font File="../../../../components/resources/Nunito-Regular.ttf" ux:Global="NunitoRegular"/>
+    <Font File="../../../../components/resources/Nunito-Light.ttf" ux:Global="NunitoLight" />
+    <Font File="../../../../components/resources/Nunito-Bold.ttf" ux:Global="NunitoBold" />
+    <Text ux:Class="Body"  TextColor="#fff" FontSize="18" Alignment="Left"/>
+    <Fuse.iOS.StatusBarConfig Style="Light" />
+    <StackPanel Dock="Top" Background="#8ba892">
+      <StatusBarBackground/>
+      <Text Margin="5,5,0,5" Alignment="Left" FontSize="18" Font="NunitoBold" TextColor="#ffffff80"> Atlanta, Georgia </Text>
+    </StackPanel>
+    <BottomBarBackground Dock="Bottom" />
+    <Panel Dock="Fill">
+      <LinearNavigation ux:Name="lnav">
+        <NavigationMotion Overflow="Clamp" GotoDuration="0.3" GotoEasing="QuadraticOut" />
+      </LinearNavigation>
+      <SwipeNavigate SwipeDirection="Down" />
+      <Panel *ngFor="let tab of tabs">
+      	<ng:time-component [ng:tab]="tab" />
+	  </Panel>
+    </Panel>
+  </DockPanel>
+</Panel>

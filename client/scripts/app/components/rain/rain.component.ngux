@@ -1,0 +1,43 @@
+<Panel ng:Selector="rain-component">
+<Panel ux:Class="Raindrop">
+  <Image Width="15" Height="15" File="../../../../components/resources/raindrops.png" Color="{{rainColor}}">
+    <Rotation Degrees="20.6" />
+  </Image>
+</Panel>
+<Grid ux:Class="RaindropRow" ColumnCount="3">
+  <Raindrop ux:Name="drop1"/>
+  <Raindrop ux:Name="drop2"/>
+  <Raindrop ux:Name="drop3"/>
+</Grid>
+<Panel Alignment="Bottom" Width="80%">
+  <RaindropRow Offset="0,0">
+    <Translation ux:Name="dropTranslation1" />
+  </RaindropRow>
+  <RaindropRow Offset="-5,20">
+    <Translation ux:Name="dropTranslation2" />
+  </RaindropRow>
+  <RaindropRow Offset="-10,40">
+    <Translation ux:Name="dropTranslation3" />
+  </RaindropRow>
+  <RaindropRow ux:Name="raindropRow2" Offset="-15,60">
+    <Translation ux:Name="dropTranslation4" />
+  </RaindropRow>
+  <RaindropRow ux:Name="raindropRow3" Offset="-20,80" Opacity="0.5">
+    <Translation ux:Name="dropTranslation5" />
+  </RaindropRow>
+  <WhileTrue Value="true">
+    <Cycle Frequency="8" Low="0" High="20" Target="dropTranslation1.Y"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="-5" Target="dropTranslation1.X"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="20" Target="dropTranslation2.Y"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="-5" Target="dropTranslation2.X"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="20" Target="dropTranslation3.Y"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="-5" Target="dropTranslation3.X"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="20" Target="dropTranslation4.Y"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="-5" Target="dropTranslation4.X"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="20" Target="dropTranslation5.Y"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0" High="-5" Target="dropTranslation5.X"  Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="1" High="0.5" Target="raindropRow2.Opacity"   Waveform="Sawtooth"/>
+    <Cycle Frequency="8" Low="0.5" High="0" Target="raindropRow3.Opacity"      Waveform="Sawtooth"/>
+  </WhileTrue>
+</Panel>
+</Panel>
