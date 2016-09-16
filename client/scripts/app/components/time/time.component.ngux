@@ -11,13 +11,13 @@
         </Panel>
       </Panel>
       <Panel>
-      <Panel *ngIf="tab.TOD !== 'Night'">
-      <Image ux:Name="theSun" Width="25%" Alignment="TopLeft" File="../../../../components/resources/sun.png"    Color="{{tab.suncolor}}" Offset="-20,-20" />
-      <WhileTrue Value="true">
-        <Spin Frequency="0.3" Target="theSun" />
-      </WhileTrue>
-      </Panel>
-      <Image *ngIf="tab.TOD === 'Night'" ux:Name="theMoon" Width="22%" Alignment="TopLeft" File="../../../../components/resources/moon.png"   Color="{{tab.mooncolor}}" Offset="-25,-30" />
+        <Panel *ngIf="tab.TOD !== 'Night'">
+          <Image ux:Name="theSun" Width="25%" Alignment="TopLeft" File="../../../../components/resources/sun.png"    Color="{{tab.suncolor}}" Offset="-20,-20" />
+          <WhileTrue Value="true">
+            <Spin Frequency="0.3" Target="theSun" />
+          </WhileTrue>
+        </Panel>
+        <Image *ngIf="tab.TOD === 'Night'" ux:Name="theMoon" Width="22%" Alignment="TopLeft" File="../../../../components/resources/moon.png"   Color="{{tab.mooncolor}}" Offset="-25,-30" />
       </Panel>
       <EnteringAnimation>
         <Move Y="-0.5" RelativeTo="ParentSize"/>

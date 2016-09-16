@@ -1,12 +1,10 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'rain-component',
-    template: require('./rain.component.ngux'),
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'rain-component',
+  template: require('./rain.component.ngux')
 })
 export class RainComponent {
-	@Input() rainColor: String;
-    constructor() {
-    }
+  @Input() rainColor: String;
+  constructor() { }
 }

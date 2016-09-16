@@ -10,24 +10,22 @@ import { RainComponent } from './components/rain/rain.component';
 import { SnowComponent } from './components/snow/snow.component';
 import { TimeComponent } from './components/time/time.component';
 
-import { Weather } from './services/weather/weather.service.ts';
-
 @NgModule({
-    imports: [
-        FuseModule, CommonModule, FormsModule, ReactiveFormsModule, HttpModule
-    ],
-    declarations: [MainComponent, RainComponent, SnowComponent, TimeComponent, Weather],
-    bootstrap: [MainComponent]
+  imports: [
+  FuseModule, CommonModule, FormsModule, ReactiveFormsModule, HttpModule
+  ],
+  declarations: [MainComponent, RainComponent, SnowComponent, TimeComponent],
+  bootstrap: [MainComponent]
 })
 class MainModule { }
 
 if (!window.fusejs) {
-    document.addEventListener('DOMContentLoaded', () => {
-        if (!(<any>window).bootstraped) {
-            (<any>window).bootstraped = true;
-            platformFuseDynamic().bootstrapModule(MainModule);
-        }
-    }, false);
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!(<any>window).bootstraped) {
+      (<any>window).bootstraped = true;
+      platformFuseDynamic().bootstrapModule(MainModule);
+    }
+  }, false);
 } else {
-    window.fusejs.bootstraper = () => platformFuseDynamic().bootstrapModule(MainModule);
+  window.fusejs.bootstraper = () => platformFuseDynamic().bootstrapModule(MainModule);
 }

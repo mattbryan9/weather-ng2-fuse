@@ -1,12 +1,10 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'snow-component',
-    template: require('./snow.component.ngux'),
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'snow-component',
+  template: require('./snow.component.ngux')
 })
 export class SnowComponent {
-	@Input() snowColor: String;
-    constructor() {
-    }
+  @Input() snowColor: String;
+  constructor() { }
 }

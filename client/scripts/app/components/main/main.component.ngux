@@ -17,7 +17,7 @@
       <SwipeNavigate SwipeDirection="Down" />
       <Panel *ngFor="let tab of tabs">
       	<ng:time-component [ng:tab]="tab" />
-	  </Panel>
+      </Panel>
     </Panel>
   </DockPanel>
 </Panel>
